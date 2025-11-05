@@ -8,7 +8,7 @@ interface ICoinFlip {
 contract CoinFlipAttack {
     ICoinFlip public coinFlipInstance;
     uint256 FACTOR =
-        57896044618658097711785492504343953926634992332820282019728792003956564819968;
+        57896044618658097711785492504343953926634992332820282019728792003956564819968; // 2^256 / 2
 
     constructor(address _coinFlipAddress) {
         coinFlipInstance = ICoinFlip(_coinFlipAddress);
