@@ -1,28 +1,36 @@
 Get ABI as json
 copy(JSON.stringify(contract.abi, null, 2))
 
-1. hello ethernaut
+0. hello ethernaut
 level = 0x7E0f53981657345B31C59aC44e9c21631Ce710c7
 ethernaut = 0xa3e7317E591D5A0F1c605be1b3aC4D2ae56104d6
 instance = 0x537E1c15E62B0d8A792f2ae4Ccf8BDB8d7DD8f85
 owner = 0x09902A56d04a9446601a0d451E07459dC5aF0820
 
-2. fallback
+1. fallback
 level = 0x3c34A342b2aF5e885FcaA3800dB5B205fEfa3ffB
 instance = 0xc1799808cF112D82Af0100cd537A4ed2740dE581
 
-3. fallout
+2. fallout
 level = 0x676e57FdBbd8e5fE1A7A3f4Bb1296dAC880aa639
 instance = 0xe0bA1457F27516eA98B026f03dFbBd9F717e2B9d
 
-4. coin flip
+3. coin flip
 level = 0xA62fE5344FE62AdC1F356447B669E9E6D10abaaF
 instance = 0xEDe4708380d8bfe1809c890e68F934A7A2774E08
 
-5. telephone
+4. telephone
 level = 0x2C2307bb8824a0AbBf2CC7D76d8e63374D2f8446
 instance = 0x1aF715ff6Ecf80F7296166d8cBeA810619815271
 
-6. token
+5. token
 level = 0x478f3476358Eb166Cb7adE4666d04fbdDB56C407
 instance = 0xF6830C221b35380d1ef37C5A5F446612Bc293982
+
+6. elevator
+level = 0x6DcE47e94Fa22F8E2d8A7FDf538602B1F86aBFd2
+instance = 0x68baE5bA4b032F3Bec7771a90ec54444540C6E0b
+
+6. delegation
+level = 0x73379d8B82Fda494ee59555f333DF7D44483fD58
+instance = 0xf3b891850Ab783CD137225d67b89270Ed82B3813
