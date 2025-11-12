@@ -45,21 +45,21 @@ contract Delegation {
 // 번외) 만약 Delegate 에 또다른 slot 1 이 있다면?
 // 같은 순서에 있는 slot 끼리 덮어씌워짐
 // 결론: 호출자와 호출 대상의 스토리지 레이아웃(순서와 타입)이 정확히 맞아야 함
-contract Delegate {
-    address public owner;    // slot 0
-    uint256 public num;      // slot 1
+// contract Delegate {
+//     address public owner;    // slot 0
+//     uint256 public num;      // slot 1
 
-    function pwn() public {
-        owner = msg.sender;  // storage slot 0에 기록 (caller의 slot 0)
-        num = 2;             // storage slot 1에 기록 (caller의 slot 1)
-    }
-}
+//     function pwn() public {
+//         owner = msg.sender;  // storage slot 0에 기록 (caller의 slot 0)
+//         num = 2;             // storage slot 1에 기록 (caller의 slot 1)
+//     }
+// }
 
-contract Delegation {
-    address public owner;    // slot 0
-    Delegate public delegate; // slot 1
-    // ...
-    fallback() external {
-        address(delegate).delegatecall(msg.data);
-    }
-}
+// contract Delegation {
+//     address public owner;    // slot 0
+//     Delegate public delegate; // slot 1
+//     // ...
+//     fallback() external {
+//         address(delegate).delegatecall(msg.data);
+//     }
+// }
