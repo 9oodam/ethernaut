@@ -15,9 +15,10 @@ contract GatekeeperOne {
     }
 
     // _gateKey 의 구조 (ex. 0x????????0000XXXX)
-    // 뒤 2 bytes(16 bits)는 uint16(tx.origin)
-    // 중간 2 bytes는 동일한 값 (uint32 == uint16)
-    // 상위 4 bytes는 0이 아닌 어떤 값 (그래야 uint32 != uint64)
+    // 0x ???? ???? 0000 XXXX
+    // 1. uint64(_gateKey)의 하위 32비트 == 하위 16비트
+    // 2. 하위 32비트 != 전체 64비트 / 상위 32비트가 0이 아니어야 함
+    // 3. _gateKey 의 하위 16비트 == tx.origin 의 하위 16비트
     modifier gateThree(bytes8 _gateKey) {
         require(uint32(uint64(_gateKey)) == uint16(uint64(_gateKey)), "GatekeeperOne: invalid gateThree part one");
         require(uint32(uint64(_gateKey)) != uint64(_gateKey), "GatekeeperOne: invalid gateThree part two");
